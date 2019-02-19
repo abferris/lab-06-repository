@@ -23,7 +23,7 @@ app.get('/weather', (request, response) => {
   const weatherData = getWeather(request.query.data);
   response.send(weatherData);
 })
-app.use('*', (request, response) => response.send(`Sorry dawg, you seem to be barking up the wrong tree!`))
+app.use('*', (request, response) => handleError('Route does not exist',response));
 
 
 // Will need a route for getting weather data
@@ -47,6 +47,7 @@ function searchToLatLong(query) {
   const location = new Location(query, geoData);
   // console.log('location in searchToLatLong()', location);
   return location;
+
 }
 
 function Location(query, res) {

@@ -53,6 +53,16 @@ Estimate of time needed to complete: 30 min
 
 Start time: 10:35
 
-Finish time: 
+Finish time: 11:45
+
+Actual time needed to complete: 1hr 10
+
+##Feature 4: error messages
+
+Estimate of time needed to complete:
+
+Start time:
+
+Finish time:
 
 Actual time needed to complete:
