@@ -59,10 +59,10 @@ Actual time needed to complete: 1hr 10
 
 ##Feature 4: error messages
 
-Estimate of time needed to complete:
+Estimate of time needed to complete: 1hr
 
-Start time:
+Start time: 11:45
 
-Finish time:
+Finish time: 12:30
 
-Actual time needed to complete:
+Actual time needed to complete:45 min
