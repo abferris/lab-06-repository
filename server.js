@@ -5,12 +5,12 @@ require('dotenv').config();
 
 // App Dependancies
 const express = require ('express');
-// const cors = require('cors');
+const cors = require('cors');
 
 //App Setup
 const PORT = process.env.PORT || 3000;
 const app = express();
-// app.use(cors());
+app.use(cors());
 //API routes
 
 //locations
@@ -64,18 +64,16 @@ function Location(query, res) {
 
 function getWeather(location) {
   const darkskyData = require('./data/darksky.json');
-  if (darkskyData.latitude===location.latitude && darkskyData.longitude===location.longitude){
-    console.log()
+  if (darkskyData.latitude.toString()===location.latitude && darkskyData.longitude.toString()===location.longitude){
     const weatherSummaries = [];
     //We are going to return array of obj and we need to create it
-    //each object in rasw data shoudl be passed through constructor
-    //these new instances shoudl be pushed to the array we created
+    //each object in rasw data should be passed through constructor
+    //these new instances should be pushed to the array we created
 
     darkskyData.daily.data.forEach( day=> {
       weatherSummaries.push(new Weather(day));
     });
     //return the array that has been filled with instances
-    console.log(weatherSummaries);
     return weatherSummaries;
   }
 }
